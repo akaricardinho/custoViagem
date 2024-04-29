@@ -3,57 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="custoViagem.MainPage">
 
-    <ContentPage.Resources>
-        <Style TargetType="Label">
-            <Setter Property="VerticalTextAlignment" Value="Center"/>
-            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
-        </Style>
-    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Calcular Custo"/>
-        <ToolbarItem Text="Ver Custo"/>
-        <ToolbarItem Text="Pedágios"/>
-    </ContentPage.ToolbarItems>
+            <Label Text="Origem:" />
+            <Entry x:Name="txt_origem"/>
 
-    <ContentPage.Content>
-        <VerticalStackLayout>
-            <SearchBar x:Name="txt_search" Margin="-10, 0, 0, 0"
-                       Placeholder="Buscar Custo"/>
-            <RefreshView 
-                x:Name="ref_carregando" 
-                IsRefreshing="False"/>
+            <Label Text="Destino:" />
+            <Entry BindingContext="destino" x:Name="txt_destino" />
 
-            <ListView x:Name="lst_produtos">
-                <ListView.Header>
-                    <Grid ColumnDefinitions="4*, *, *, *">
-                        <Label Grid.Column="0" Text="Origem"/>
-                        <Label Grid.Column="1" Text="Destino"/>
-                        <Label Grid.Column="2" Text="Distancia"/>
-                        <Label Grid.Column="3" Text="Rendimento"/>
-                        <Label Grid.Column="4" Text="Combustivel"/>
-                    </Grid>
-                </ListView.Header>
+            <Label Text="Distancia" />
+            <Entry BindingContext="distancia" x:Name="txt_distancia" />
 
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem Text="Remover"/>
-                            </ViewCell.ContextActions>
-                            <Grid ColumnDefinitions="4*, *, *, *">
-                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding Origem}"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Destino}"/>
-                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Distancia}"/>
-                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding Rendimento}"/>
-                                <Label Grid.Row="0" Grid.Column="4" Text="{Binding Combustivel}"/>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+            <Label Text="Rendimento" />
+            <Entry BindingContext="rendimento" x:Name="txt_rendimento" />
 
-            </ListView>
-        </VerticalStackLayout>
-    </ContentPage.Content>
+            <Label Text="Preço Combustivel" />
+            <Entry BindingContext="valor_combustivel" x:Name="txt_combustivel" />
 
+            <Button Margin="5" WidthRequest="200" HorizontalOptions="Center" x:Name="btnCreatePedagio" Text="Adicionar pedagio" Clicked="btnCreatePedagio_Clicked"/>
+            <Button Margin="5" WidthRequest="200" HorizontalOptions="Center" x:Name="btnListaPedagio" Text="Lista pedagio" Clicked="btnListaPedagio_Clicked"/>
+            <Button Margin="5" WidthRequest="200" HorizontalOptions="Center" x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked"/>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
