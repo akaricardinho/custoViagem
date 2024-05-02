@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="custoViagem.Views.CalcularPedagio"
+             Title="Calcular Pedagio">
+    <ScrollView>
+        <StackLayout>
+            <Label x:Name="lblOrigem" Text="Origem: "/>
+
+            <Label x:Name="lblDestino" Text="Destino: "/>
+
+            <Label x:Name="lblValor" Text="Valor: "/>
+
+            <Button x:Name="btnCalcular" Clicked="btnCalcular_Clicked" Text="Calcular" HorizontalOptions="Center" WidthRequest="250" Margin="20"/>
+
+            <Button x:Name="btnNovaViagem" Clicked="btnNovaViagem_Clicked" Text="Criar nova viagem" HorizontalOptions="Center" WidthRequest="250" Margin="20"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

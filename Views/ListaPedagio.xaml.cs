@@ -6,4 +6,14 @@ public partial class ListaPedagio : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void btnSomar_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void btnAddNovo_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
