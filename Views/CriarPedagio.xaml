@@ -11,7 +11,7 @@
             <Label Text="Valor:"/>
             <Entry x:Name="txtValor" BindingContext="valor" />
 
-            <Button x:Name="btnAdicionar" Clicked="btnAdicionar_Clicked" Text="Adicionar" WidthRequest="250" Margin="20"  HorizontalOptions="Center"/>
+            <Button x:Name="btnAdicionar" BackgroundColor="Red" Clicked="btnAdicionar_Clicked" Text="Adicionar" WidthRequest="250" Margin="20"  HorizontalOptions="Center"/>
 
         </StackLayout>
     </VerticalStackLayout>

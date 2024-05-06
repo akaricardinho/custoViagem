@@ -5,7 +5,10 @@ namespace custoViagem.Models
     {
         [AutoIncrement, PrimaryKey]
         public int Id { get; set; }
-        public double Valor { get; set; }
-        public string Local { get; set; }
+        public string Origem { get; set; }
+        public string Destino { get; set; }
+        public double Distancia { get; set; }
+        public double Rendimento { get; set; }
+        public double Preco { get; set; }
     }
 }

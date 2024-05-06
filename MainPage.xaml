@@ -8,23 +8,23 @@
         <StackLayout>
 
             <Label Text="Origem:" />
-            <Entry x:Name="txt_origem"/>
+            <Entry x:Name="txtOrigem"/>
 
             <Label Text="Destino:" />
-            <Entry BindingContext="destino" x:Name="txt_destino" />
+            <Entry BindingContext="destino" x:Name="txtDestino" />
 
             <Label Text="Distancia" />
-            <Entry BindingContext="distancia" x:Name="txt_distancia" />
+            <Entry BindingContext="distancia" x:Name="txtDistancia" />
 
             <Label Text="Rendimento" />
-            <Entry BindingContext="rendimento" x:Name="txt_rendimento" />
+            <Entry BindingContext="rendimento" x:Name="txtRendimento" />
 
             <Label Text="Preço Combustivel" />
-            <Entry BindingContext="valor_combustivel" x:Name="txt_combustivel" />
+            <Entry BindingContext="valor_combustivel" x:Name="txtCombustivel" />
 
-            <Button Margin="5" WidthRequest="200" HorizontalOptions="Center" x:Name="btnCreatePedagio" Text="Adicionar pedagio" Clicked="btnCreatePedagio_Clicked"/>
-            <Button Margin="5" WidthRequest="200" HorizontalOptions="Center" x:Name="btnListaPedagio" Text="Lista pedagio" Clicked="btnListaPedagio_Clicked"/>
-            <Button Margin="5" WidthRequest="200" HorizontalOptions="Center" x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked"/>
+            <Button Margin="5" BackgroundColor="Red"  WidthRequest="200" HorizontalOptions="Center" x:Name="btnCreatePedagio" Text="Adicionar pedagio" Clicked="btnCreatePedagio_Clicked"/>
+            <Button Margin="5" BackgroundColor="Red"  WidthRequest="200" HorizontalOptions="Center" x:Name="btnListaPedagio" Text="Lista pedagio" Clicked="btnListaPedagio_Clicked"/>
+            <Button Margin="5" BackgroundColor="Red"  WidthRequest="200" HorizontalOptions="Center" x:Name="btnCalcular" Text="Calcular Viagem" Clicked="btnCalcular_Clicked"/>
 
         </StackLayout>
     </ScrollView>
